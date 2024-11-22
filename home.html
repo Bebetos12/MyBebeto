@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebeto</title>
+    <style>
+        /* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-image: url('hello.jpg');
+    background-size: cover; /* Ensures the image covers the whole section */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Makes the background image fixed while scrolling */
+    padding: 60px 0;
+    
+}
+
+/* Header */
+header {
+    background: #2b3435;
+    width: 100%;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Home Section */
+#home {
+    background-image: url('hello.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the whole section */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Makes the background image fixed while scrolling */
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* Overlay for the Background */
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Flag Animation */
+.flag-container {
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: flag-animation 5s infinite;
+}
+
+.flag {
+    color: #fff;
+    width: 150px;
+    height: auto;
+}
+
+/* Content Box */
+.content h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.content p {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    animation: fadeIn 2s ease-in-out;
+    animation-delay: 0.5s;
+}
+/* Button Styles */
+.read-about-btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.read-about-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #262c2c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.social-media a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #4CAF50;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes flag-animation {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    50% {
+        transform: translateX(-50%) rotate(15deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="background">
+            <div class="gradient-overlay">
+                <div class="flag-container">
+                    <img src="ghost.png" alt="ghost" class="flag">
+                </div>
+                <div class="content">
+                    <h1>Welcome to Our Website</h1>
+                    <p>Your journey to excellence starts here.</p>
+                    <a href="about.html" class="read-about-btn">Read About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer with Social Media Links -->
+    <footer>
+        <p>Follow us on:</p>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>
